@@ -1,0 +1,345 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: hsl(180, 9%, 98%);
+  color: hsl(0, 0%, 29%);
+  font-family: sans-serif;
+  max-width: 100%;
+  min-width: 300px;
+}
+
+/* Header */
+
+
+header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 64px;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+
+#colmar {
+  color: hsl(0, 0%, 29%);
+  font-weight: bold;
+}
+
+#academy {
+  color: hsl(0, 0%, 65%);
+}
+
+nav a{
+  color: hsl(0, 0%, 29%);
+  display: inline-flex;
+  margin-right: 1rem;
+}
+
+.header.mobile {
+  margin: 0 1.5rem;
+}
+
+/* Re-use Code */
+
+.content {
+  display: flex;
+  flex-shrink: 1;
+  position: relative;
+  top: 64px;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: bold;
+  padding: 1.5rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 8px;
+}
+
+.title {
+  text-align: center;
+  display: block;
+  padding: 2rem 0;
+}
+
+.large {
+  padding: 2rem 1.5rem;
+  max-width: 60%;
+}
+
+.large img{
+  height: auto;
+  max-width: 100%;
+  padding-bottom: 0.75rem;
+}
+
+.large video{
+  height: auto;
+  max-width: 100%;
+  padding-bottom: 0.75rem;
+}
+
+.large h2 {
+  padding: 0.75rem 0;
+}
+
+.small {
+  padding: 2rem 0 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  overflow: hidden;
+}
+
+.small .image {
+  max-width: 35%;
+}
+
+.more {
+  display: flex;
+  max-width: 100%;
+  padding: 16px;
+}
+
+.more:first-child {
+  padding-top: 0;
+}
+
+.more img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.content .description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  font-size: 1rem;
+  margin: 0 16px;
+}
+
+/* Banner */
+
+.banner {
+  background-color: hsl(210, 5%, 92%);
+}
+
+.learn {
+  justify-content: center;
+  max-width: 75%;
+}
+
+.button {
+  display: block;
+  background-color: hsl(0, 0%, 29%);
+  color: hsl(0, 0%, 99%);
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 8px 0;
+  max-width: 100%;
+}
+
+
+/* Information */
+
+.large #alumna {
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+
+.information .more:last-child {
+  background-color: hsl(210, 5%, 92%);
+}
+
+.description a {
+  display: block;
+  line-height: 2;
+  color: hsl(212, 72%, 60%);
+}
+
+
+/* Subjects */
+
+.subjects.web {
+  padding-bottom: 2rem;
+  background-color: hsl(210, 5%, 92%);
+}
+
+.courses.web {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 90%;
+  margin: auto;
+}
+
+.course {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 30%;
+  margin-bottom: 1rem;
+}
+
+.course img {
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+.course .description {
+  max-height: 100%;
+  margin: 0;
+  padding: 1rem;
+}
+
+.course .description h2 {
+  padding-bottom: 0.75rem;
+}
+
+.course .description p {
+  color: hsl(0, 0%, 50%);
+}
+
+
+/* Thesis */
+
+.thesis {
+  background-color: hsl(180, 9%, 98%);
+}
+
+.thesisbody {
+  display: flex;
+  max-width: 100%;
+  margin-top: -2rem;
+}
+
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.75rem;
+}
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 780px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+
+.web {
+    display: none;
+  }
+
+/* Banner */
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .learn {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+/* Re-use */
+
+  .large {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .large img {
+    image-resolution: snap;
+  }
+
+  .small {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .small .image.mobile {
+    max-width: 100%;
+  }
+
+/* Information */
+
+  .information .more {
+    flex-direction: column;
+  }
+
+  .information .more:last-child {
+    background-color: hsl(180, 9%, 98%);
+  }
+
+/* Subjects */
+
+  .subjects.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile .courses {
+    width: 100%;
+    margin: auto;
+  }
+
+  .mobile .courses h2 {
+    background-color: hsl(210, 5%, 92%);
+    align-items: flex-start;
+    max-width: 100%;
+    padding: 1.33rem;
+    margin: 0 1rem 0.75rem 1rem;
+  }
+
+/* Thesis */
+
+  .thesisbody {
+    margin: 0;
+  }
+
+/* Footer */
+
+  footer {
+    align-items: flex-end;
+  }
+}
